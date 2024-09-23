@@ -45,6 +45,7 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
   - Functionality
 
 ### Future Features
+  - Detailed User Profile page
 
 <br>
 
@@ -64,6 +65,9 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
 ### Wireframes
   - Wireframes were created in Balsamiq prior to development, in order to gauge proportions and overall organisations of the pages
+
+  <img src="documentation/wireframes/Home Page - All Users.png" width="700" alt="Home page for all users (non-logged in)">
+  <img src="documentation/wireframes/Home Page - Logged in Users.png" width="700" alt="Home page for logged in users)">
 
 <br>
 
