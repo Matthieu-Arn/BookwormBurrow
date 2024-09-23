@@ -13,11 +13,11 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
 ## Table of Contents
   - [User Experience](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#user-experience)
-  - [Design](https://github.com/Matthieu-Arn/BookwormBurrow)
-  - [Technologies Used](https://github.com/Matthieu-Arn/BookwormBurrow)
-  - [Testing](https://github.com/Matthieu-Arn/BookwormBurrow)
-  - [Deployment](https://github.com/Matthieu-Arn/BookwormBurrow)
-  - [Credits](https://github.com/Matthieu-Arn/BookwormBurrow)
+  - [Design](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#design)
+  - [Technologies Used](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#technologies-used)
+  - [Testing](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#testing)
+  - [Deployment](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#deployment)
+  - [Credits](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#credits)
 
 <br>
 
