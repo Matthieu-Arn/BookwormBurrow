@@ -12,7 +12,7 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 [XXX Am I Reponsive Screen Capture] <br>
 
 ## Table of Contents
-  - [User Experience](https://github.com/Matthieu-Arn/BookwormBurrowblob/main/README.md#user-experience)
+  - [User Experience](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#user-experience)
   - [Design](https://github.com/Matthieu-Arn/BookwormBurrow)
   - [Technologies Used](https://github.com/Matthieu-Arn/BookwormBurrow)
   - [Testing](https://github.com/Matthieu-Arn/BookwormBurrow)
