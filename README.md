@@ -53,7 +53,7 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 ### Entity Relationship Diagrams
   - ERDs were created in Lucidchart prior to development, in order to structure the database relationships
 
-  <img src="documentation/erds/BookwormBurrow v1.jpeg" width="700" alt="Entity Relationships Diagrames for the Bookworm Burrow database">
+  <img src="documentation/erds/BookwormBurrow v1_2.jpeg" width="700" alt="Entity Relationships Diagrames for the Bookworm Burrow database">
 
 
 ### Imagery
