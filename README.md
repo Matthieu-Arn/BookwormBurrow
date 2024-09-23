@@ -50,7 +50,8 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
 ## Design
 
-## Entity Relationship Diagrams
+### Entity Relationship Diagrams
+  - ERDs were created in Lucidchart prior to development, in order to structure the database relationships
 
 ### Imagery
 
