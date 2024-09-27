@@ -1,1 +1,1 @@
-web: gunicorn bookwormburrow.wsgi
+web: gunicorn bookworm.wsgi
