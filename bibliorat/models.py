@@ -10,9 +10,10 @@ class Bookprofile(models.Model):
     profileauthor = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="book_profiles"
     )
-    # authorname = models.ForeignKey(
-    # "BookAuthor", on_delete=models.CASCADE, related_name="book_authors"
-    # )
+    authorname = models.ForeignKey(
+    "BookAuthor", on_delete=models.CASCADE, related_name="book_authors", default=True
+    )
+    bookhook = models.TextField(blank=True)
     profilecontent = models.TextField()
     bookgenre = models.CharField(max_length=30, unique=True)
     publicationyear = models.IntegerField()
@@ -22,6 +23,6 @@ class Bookprofile(models.Model):
     
 class Bookauthor(models.Model):
     authorname = models.CharField(max_length=200, unique=True)
-    # authorbio = models.TextField()
+    authorbio = models.TextField(blank=True)
     # created_on = models.DateTimeField(auto_now_add=True)
     # status = models.IntegerField(choices=STATUS, default=0)
