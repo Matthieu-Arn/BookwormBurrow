@@ -19,6 +19,7 @@ class Bookprofile(models.Model):
     publicationyear = models.IntegerField()
     originallanguage = models.CharField(max_length=30, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     
 class Bookauthor(models.Model):
