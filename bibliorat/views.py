@@ -4,10 +4,9 @@ from django.views import generic
 from .models import Bookprofile
 
 # Create your views here.
-# def my_blog(request):
-    # return HttpResponse("Hello, Bibliorat!")
+
 class BookprofileList(generic.ListView):
-    # model = Bookprofile
     queryset = Bookprofile.objects.filter(status=1).order_by('?')
-    # template_name = 'bibliorat/home.html'
-    context_object_name = 'bookprofiles'
+    template_name = 'bibliorat/index.html'
+    # context_object_name = 'bookprofiles'
+    paginate_by = 6
