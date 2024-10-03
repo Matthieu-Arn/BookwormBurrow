@@ -8,6 +8,6 @@ from .models import Bookprofile
     # return HttpResponse("Hello, Bibliorat!")
 class BookprofileList(generic.ListView):
     # model = Bookprofile
-    queryset = Bookprofile.objects.all()
-    template_name = 'bibliorat/home.html'
+    queryset = Bookprofile.objects.filter(status=1).order_by('?')
+    # template_name = 'bibliorat/home.html'
     context_object_name = 'bookprofiles'

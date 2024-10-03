@@ -16,11 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-# from bibliorat.views import my_blog
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    # path('bibliorat/', my_blog, name='bibliorat'),
     path("", include("bibliorat.urls"), name="bibliorat-urls"),
+    path('admin/', admin.site.urls),
 ]
 
