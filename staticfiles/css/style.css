@@ -105,6 +105,17 @@ ul li a.page-link {
     color: #E84610;
 }
 
+.bookprofile-authorname {
+    font-size:larger;
+    margin-left: 5%;
+}
+
+.bookprofile-bookdetails {
+    font-size:medium;
+    font-style: italic;
+    margin-left: 5%;
+}
+
 .bookprofile-title {
     margin-top: 10%;
     margin-left: 5%;

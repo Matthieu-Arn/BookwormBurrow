@@ -7,8 +7,10 @@
             <div class="col-md-6 masthead-text">
                 <!-- Book title goes in these h1 tags -->
                 <h1 class="bookprofile-title">{{ bookprofile.booktitle }}</h1>
-                <!-- Book author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ bookprofile.authorname }} | {{ bookprofile.created_on }}</p>
+                <h2 class="bookprofile-authorname"> by {{ bookprofile.authorname }}</h2>
+                <h3 class="bookprofile-bookdetails"> First published {{ bookprofile.publicationyear }} in {{ bookprofile.originallanguage }} | Genre: {{ bookprofile.bookgenre }}</h3>
+                <!-- Profile author goes before the | the post's created date goes after -->
+                <p class="bookprofile-subtitle"> &nbsp; &nbsp; Profile by {{ bookprofile.profileauthor }} | {{ bookprofile.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
