@@ -11,7 +11,7 @@ class Bookprofile(models.Model):
     User, on_delete=models.CASCADE, related_name="book_profiles"
     )
     authorname = models.ForeignKey(
-    "BookAuthor", on_delete=models.CASCADE, related_name="book_authors", default=True
+    Bookauthor, on_delete=models.CASCADE, related_name="book_authors", default=True
     )
     bookhook = models.TextField(blank=True)
     profilecontent = models.TextField()
