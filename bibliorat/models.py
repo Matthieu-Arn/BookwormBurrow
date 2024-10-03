@@ -27,3 +27,16 @@ class Bookauthor(models.Model):
     authorbio = models.TextField(blank=True)
     # created_on = models.DateTimeField(auto_now_add=True)
     # status = models.IntegerField(choices=STATUS, default=0)
+
+class Bookreview(models.Model):
+    booktitle = models.ForeignKey(Bookprofile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    reviewcontent = models.TextField()
+    approved = models.BooleanField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+# class Readinglist(models.Model):
+#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     booktitle = models.ForeignKey(Bookprofile, on_delete=models.CASCADE)
+#     created_on = models.DateTimeField(auto_now_add=True)
+#     status = models.IntegerField(choices=STATUS, default=0)
