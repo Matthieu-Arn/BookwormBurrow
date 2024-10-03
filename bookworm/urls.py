@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("", include("bibliorat.urls"), name="bibliorat-urls"),
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    path("", include("bibliorat.urls"), name="bibliorat-urls"),
 ]
 
+# order paths alphabetically, empty ones last
