@@ -18,7 +18,7 @@
                                     <p class="author">Author: {{ bookprofile.authorname }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="bookprofile-link">
+                            <a href="{% url 'bookprofile_detail' bookprofile.slug %}" class="bookprofile-link">
                                 <h2 class="card-title">{{ bookprofile.booktitle }}</h2>
                                 <p class="card-text text-muted h6">{{ bookprofile.bookhook}}</p>
                             </a>
