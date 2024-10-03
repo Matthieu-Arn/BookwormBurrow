@@ -30,9 +30,9 @@ class Bookauthor(models.Model):
 
 class Bookreview(models.Model):
     booktitle = models.ForeignKey(Bookprofile, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    reviewauthor = models.ForeignKey(User, on_delete=models.CASCADE)
     reviewcontent = models.TextField()
-    approved = models.BooleanField()
+    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
 # class Readinglist(models.Model):
