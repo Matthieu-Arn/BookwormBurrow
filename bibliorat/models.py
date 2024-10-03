@@ -10,6 +10,13 @@ class Bookauthor(models.Model):
     # created_on = models.DateTimeField(auto_now_add=True)
     # status = models.IntegerField(choices=STATUS, default=0)
 
+    class Meta:
+        ordering = ["authorname"]
+
+    def __str__(self):
+        return f"{self.authorname}"
+
+
 class Bookprofile(models.Model):
     booktitle = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -28,7 +35,12 @@ class Bookprofile(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ["-created_on"]
     
+    def __str__(self):
+        return f"{self.booktitle} by {self.authorname}, profiled by {self.profileauthor}"
 
 
 class Bookreview(models.Model):
@@ -37,6 +49,13 @@ class Bookreview(models.Model):
     reviewcontent = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"A review by {self.reviewauthor} of {self.booktitle}"
+
 
 # class Readinglist(models.Model):
 #     user = models.ForeignKey(User, on_delete=models.CASCADE)
