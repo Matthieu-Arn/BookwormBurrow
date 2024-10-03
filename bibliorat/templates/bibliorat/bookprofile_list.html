@@ -12,10 +12,10 @@
     <h1>Book Profiles List</h1>
     {% if bookprofiles %}
         <ul>
-            {% for book in bookprofiles %}
-                <h2>{{ book.booktitle }} by {{ book.authorname.authorname }}</h2>
-                <p>{{book.bookhook}}</p>
-                <p>Reviewd by {{book.profileauthor}}</p>
+            {% for bookprofile in bookprofiles %}
+                <h2>{{ bookprofile.booktitle }} by {{ bookprofile_list.authorname.authorname }}</h2>
+                <p>{{bookprofile_list.bookhook}}</p>
+                <p>Reviewd by {{bookprofile_list.profileauthor}}</p>
             {% endfor %}
         </ul>
     {% else %}
