@@ -91,22 +91,26 @@ body {
     z-index: 100;
 }
 
-.post-link {
+.bookprofile-link {
     text-decoration: none;
     color: #445261;
 }
 
-.post-link:hover,
+ul li a.page-link {
+    font-style: italic;
+}
+
+.bookprofile-link:hover,
 .page-link {
     color: #E84610;
 }
 
-.post-title {
+.bookprofile-title {
     margin-top: 10%;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.bookprofile-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
