@@ -9,7 +9,10 @@ The site offers a curated list of titles for which a full book profile is availa
 Registered users can add a review under any book profile, and can also update and delete their reviews if they so wish. Registered users can also add books to their reading list, which can be modified at any time by changing the status of their chosen books ("To read", "Read - Good read", and "Read - Not so good"), or by removing them from the list. <br>
 Admin users can add, modify or delete new book profiles, add, modify or delete author profiles, and approve user reviews.
 
-[XXX Am I Reponsive Screen Capture] <br>
+
+<img src="documentation/responsiveness/Bookworm-Burrow_AmIResponsive.jpg" width="700" alt="Am I Reponsive output for the Bookworm Burrow application">
+
+<br>
 
 ## Table of Contents
   - [User Experience](https://github.com/Matthieu-Arn/BookwormBurrow/blob/main/README.md#user-experience)
@@ -40,12 +43,14 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 ## Features
 
 ### Existing Features
-  - Structure
-  - Presentation
-  - Functionality
+  - Structure, Presentation and Functionality
+    The website is simply presented over few pages. The landing page (Home) offers a paginated list of books. Users, registered or not can navigate across the list and access a full profile for any given book by clicking on its title. <br>
+    For registered users, it is possible to add a review or comment under each book profile, to edit, or even delite said review. It is also possible, from each book profile, to add the book to a user-specific reading list. This list can be accessed from the navigation bar when users are logged in, allowing them to have a quick overview of their list, and of the status of the titles it contains (not read, read and enjoyed, read and not enjoyed). It is of course possible to remove title from the list at any time.
 
 ### Future Features
-  - Detailed User Profile page
+  - Detailed User Profile page, where registered users can keep personal notes on the books they have read or those they wish to read.
+  - Detailed Author page, whre for evey author ion the data base, a full profile including list of books availables on the website, can be accessed. This can be completed by various resources (links towards third partyresources for instance)
+  - Contact form will be made available to all users
 
 <br>
 
