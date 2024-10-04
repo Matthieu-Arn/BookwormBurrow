@@ -34,13 +34,13 @@
                 <!-- The bookprofile content (synopsis/analysis) goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
-                  <strong>Synopsis</strong> {{ bookprofile.profilesynopsis | safe }}
+                  <strong>Synopsis</strong> <br>{{ bookprofile.profilesynopsis | safe }}
+                </p>
+                 <p class="card-text">
+                  <strong>Analysis</strong> <br>{{ bookprofile.profileanalysis | safe }}
                 </p>
                 <p class="card-text">
-                  <strong>Analysis</strong> {{ bookprofile.profileanalysis | safe }}
-                </p>
-                <p class="card-text">
-                  <strong>About the author</strong> {{ bookprofile.authorname.authorbio | safe }}
+                  <strong>About the author</strong> <br> {{ bookprofile.authorname.authorbio | safe }}
                 </p>
             </div>
         </div>
