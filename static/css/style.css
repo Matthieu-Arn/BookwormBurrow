@@ -1,11 +1,18 @@
+.oooh-baby-regular {
+    font-family: "Oooh Baby", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {
     background-color: #F9FAFC;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-family: Oooh Baby, sans-serif;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 400;
     color: #4A4A4F;
 }
 

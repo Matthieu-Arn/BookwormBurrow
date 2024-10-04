@@ -4,9 +4,9 @@
 The page is deployed here: https://bookwormburrow-1107f1b88f25.herokuapp.com/ <br>
 The project board is available at: https://github.com/users/Matthieu-Arn/projects/7 <br><br>
 
-**Bookworm Burrow** is a meeting place for avid book readers looking for their next read. <br>
-The site offers a curated list of titles for which a full book profile is available (summary, genre, publication details, a short biography of the author). All site users andcan browse the available titles and read the reviews left by registered users under each individual book profile. <br>
-Registered users can add a review under any book profile, and can also update and delete their reviews if they so wish. Registered users can also add books to their reading list, which can be modified at any time by changing the status of their chosen books ("To read", "Read") or by removing them from the list. <br>
+**Bookworm Burrow** is a meeting place for avid book readers looking for their next read! <br>
+The site offers a curated list of titles for which a full book profile is available (summary, genre, publication details, a short biography of the author). All site users can browse the available titles and read the reviews left by registered users under each individual book profile. <br>
+Registered users can add a review under any book profile, and can also update and delete their reviews if they so wish. Registered users can also add books to their reading list, which can be modified at any time by changing the status of their chosen books ("To read", "Read - Good read", and "Read - Not so good"), or by removing them from the list. <br>
 Admin users can add, modify or delete new book profiles, add, modify or delete author profiles, and approve user reviews.
 
 [XXX Am I Reponsive Screen Capture] <br>

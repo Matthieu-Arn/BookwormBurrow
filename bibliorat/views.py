@@ -9,7 +9,7 @@ from .forms import BookreviewForm
 # Create your views here.
 
 class BookprofileList(generic.ListView):
-    queryset = Bookprofile.objects.filter(status=1).order_by('-authorname')
+    queryset = Bookprofile.objects.filter(status=1).order_by('authorname')
     template_name = 'bibliorat/index.html'
     paginate_by = 6
 
