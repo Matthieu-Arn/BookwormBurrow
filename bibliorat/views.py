@@ -109,3 +109,4 @@ def bookreview_delete(request, slug, bookreview_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
 
     return HttpResponseRedirect(reverse('bookprofile_detail', args=[slug]))
+

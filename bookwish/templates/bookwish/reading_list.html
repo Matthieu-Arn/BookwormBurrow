@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <h1>My Reading List</h1>
+
+  {% if reading_list_items %}
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Book Title</th>
+              <th>Status</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for item in reading_list_items %}
+          <tr>
+              <td>{{ item.booktitle.booktitle }}</td>
+              <td>
+                  <form method="POST" action="{% url 'change_status' item.id %}">
+                      {% csrf_token %}
+                      <select name="status" onchange="this.form.submit()">
+                          <option value="0" {% if item.status == 0 %}selected{% endif %}>Want to Read</option>
+                          <option value="1" {% if item.status == 1 %}selected{% endif %}>Read and Good</option>
+                          <option value="2" {% if item.status == 2 %}selected{% endif %}>Read and Not Good</option>
+                      </select>
+                  </form>
+              </td>
+              <td>
+                  <form method="POST" action="{% url 'remove_from_list' item.id %}">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-danger">Remove</button>
+                  </form>
+              </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+  {% else %}
+  <p>Your reading list is empty.</p>
+  {% endif %}
+</div>
+
+{% endblock content %}

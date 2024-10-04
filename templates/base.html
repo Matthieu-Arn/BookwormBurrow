@@ -47,7 +47,7 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item"></li>
-                        <a class="nav-link {% if request.path == bookwish_url %}active{% endif %}" aria-current="page" href="{% url 'bookwish' %}">My Bookwish List</a>
+                        <a class="nav-link {% if request.path == '/my-list/' %}active{% endif %}" aria-current="page" href="{% url 'reading_list' %}">My Bookwish List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
