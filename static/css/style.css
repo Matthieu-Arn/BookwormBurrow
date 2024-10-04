@@ -38,10 +38,17 @@ body {
     position: relative;
 }
 
+
+.card-img-top {
+    height: 600px;
+    width: auto;
+}
+
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 30%;
+    /* min-width: 30%; */
+    max-height: 30%;
     left: -2px;
     background-color: #188181;
 }
