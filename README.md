@@ -2,7 +2,10 @@
 <h1 align="center">Bookworm Burrow</h1>
 <br>
 The page is deployed here: https://bookwormburrow-1107f1b88f25.herokuapp.com/ <br>
-The project board is available at: https://github.com/users/Matthieu-Arn/projects/7 <br><br>
+The project board is available at: https://github.com/users/Matthieu-Arn/projects/7 <br>
+Credentials for the Superuser: <br>
+     - Username: TheHeadBookworm / Password: G7x#pV9Q
+<br><br>
 
 **Bookworm Burrow** is a meeting place for avid book readers looking for their next read! <br>
 The site offers a curated list of titles for which a full book profile is available (summary, genre, publication details, a short biography of the author). All site users can browse the available titles and read the reviews left by registered users under each individual book profile. <br>
@@ -50,7 +53,8 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 ### Future Features
   - Detailed User Profile page, where registered users can keep personal notes on the books they have read or those they wish to read.
   - Detailed Author page, whre for evey author ion the data base, a full profile including list of books availables on the website, can be accessed. This can be completed by various resources (links towards third partyresources for instance)
-  - Contact form will be made available to all users
+  - Contact form to be made available to all users
+  - Addition of various response modals to improve User experience when adding/removing items from the reading list
 
 <br>
 
@@ -59,14 +63,17 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 ### Entity Relationship Diagrams
   - ERDs were created in Lucidchart prior to development, in order to structure the database relationships
 
-  <img src="documentation/erds/BookwormBurrow v1_3.jpeg" width="700" alt="Entity Relationships Diagrames for the Bookworm Burrow database">
+  <img src="documentation/erds/BookwormBurrow v1_6.jpeg" width="700" alt="Entity Relationships Diagrames for the Bookworm Burrow database">
 
 
 ### Imagery
+  - Pictures of book covers and authors were sourced, from Wikimedia/Creative Commons.    
 
 ### Colour Scheme
+  - The colour scheme is neutral, in a nod to national libray websites such as the British Libray (https://www.bl.uk/)or the French National Libray (https://gallica.bnf.fr/accueil/en/content/accueil-en)
 
 ### Typography
+  - In the same spirit as the colour scheme, the typography is neutral (Roboto, Lato).
 
 ### Wireframes
   - Wireframes were created in Balsamiq prior to development, in order to gauge proportions and overall organisations of the pages
@@ -77,38 +84,49 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 <br>
 
 ## Technologies Used
-
+  
 ### Languages Used
+  - HTML5
+  - CSS3 / Bootstrap
+  - JavaScript
+  - Django
 
 ### Resources & Programmes used
-  - Programmes & Tools
+  - - Programmes & Tools
+    - Google Fonts
+    - GitPod & GitHub: for code development and code safekeeping respectively 
+    - Balsamiq: to develop wireframes
+    - Paint.net: to edit the images used in assets and documentation
+    - Snipping Tool: to take screen captures of various documentation images
   - Resources
-    - Coding Resources
-    - Background Informnation
-    
+    - Coding Resources 
+      - W3Schools https://www.w3schools.com/
+      - Stack Overflow https://stackoverflow.com/
+      - SheCodes https://www.shecodes.io/
+      - GitHub Docs https://docs.github.com/en
+      - Markdown Guide https://www.markdownguide.org/
+      - Code Institute LMS https://learn.codeinstitute.net/ci_program/fsbootcamp231121
+      - Google DevTools https://developer.chrome.com/docs/devtools
+      - ReadMe file https://github.com/elainebroche-dev/ms1-thrive/tree/master
+    - Background Information on books and their authors
+      - Wikipedia https://en.wikipedia.org/wiki/Main_Page
+          
 <br>
 
 ## Testing
+  Testing was unfortunately not performed at scale. <br>
+  
+  ### Browser Compatibility
+  Browser compatibility and responsiveness were tested across platforms and devices, and did not offer significant failure.
 
-### HTML Validation
-
-### CSS VAlidation
-
-### JavaScript Validation
-
-### Django Validation
-
-### Lighthouse
-
-### Browser Compatibility
-
-### Known Bugs
+  ### Known Bugs
+  Under individual book profiles, buttons to add or remove the current book from a reading list are not working as they should (The "Remove from reading list" button should not appear if the book is not on the reading list, while the "Add to reading list" button should not appear if the book is already on the reading list) 
 
 <br>
 
 ## Deployment
   - The site was deployed from the early stages of development using GitHub and Heroku
-  - The live site can be found at: XXX
+  - The live site can be found at: https://bookwormburrow-1107f1b88f25.herokuapp.com/
 
 <br>
 
@@ -117,5 +135,11 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 ### Content
 
 ### Code
+  - Project structure and architecture adapted or inspired from several walkthrough projects as provided by the *Code Institute*'s LMS
+  - ReadMe structure adapted from Elaine Roche's *Thrive Juices and Smoothies* website 
+  - Several coding issues were resolved using documentation and archived discussion boards available from *W3Schools*, *Stack Overflow*, *She Codes*, etc., 
+  - Several bugs identified and fixed using *ChatGPT*
 
 ### Media
+  - As stated above, media sourced from Wikimedia / Creative Commons wherever possible. Several book covers however were sourced from online retailers (Waterstones, Amazon)
+  - The author aknowledges that this project and all its content are for educational purposes only, and that copyrighted materials are included under fair use provisions

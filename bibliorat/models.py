@@ -59,8 +59,4 @@ class Bookreview(models.Model):
         return f"A review by {self.reviewauthor} of {self.booktitle}"
 
 
-# class Readinglist(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     booktitle = models.ForeignKey(Bookprofile, on_delete=models.CASCADE)
-#     created_on = models.DateTimeField(auto_now_add=True)
-#     status = models.IntegerField(choices=STATUS, default=0)
+
