@@ -9,7 +9,7 @@
                 <h1 class="bookprofile-title">{{ bookprofile.booktitle }}</h1>
                 <h2 class="bookprofile-authorname"> by {{ bookprofile.authorname }}</h2>
                 <h3 class="bookprofile-bookdetails"> First published {{ bookprofile.publicationyear }} in {{ bookprofile.originallanguage }} | Genre: {{ bookprofile.bookgenre }}</h3>
-                <!-- Profile author goes before the | the post's created date goes after -->
+                <!-- Profile author goes before the | the profile's created date goes after -->
                 <p class="bookprofile-subtitle"> &nbsp; &nbsp; Profile by {{ bookprofile.profileauthor }} | {{ bookprofile.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -34,6 +34,48 @@
             </div>
         </div>
     </div>
+      <!-- Displaying count of Bookreviews -->
+  <div class="row">
+    <div class="col-12">
+      <strong class="text-secondary">
+        <i class="far fa-bookreviews"></i> Reviews published to date: {{ bookreview_count }}
+      </strong>
+    </div>
+    <div class="col-12">
+      <hr>
+    </div>
+  </div>
+  <!-- Displaying Bookreviews -->
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <h3>Reviews:</h3>
+      <div class="card-body">
+        <!-- We want a for loop inside the empty control tags
+          to iterate through each bookreview in bookreviews -->
+        {% for bookreview in bookreviews %}
+        <div class="p-2 bookreviews
+          {% if not bookreview.approved and bookreview.reviewauthor == user %}
+          faded{% elif not bookreview.approved %} d-none{% endif %}">
+          <p class="font-weight-bold">
+            On {{ bookreview.created_on }},
+            <span class="font-weight-normal">
+              {{ bookreview.reviewauthor }}
+            </span> wrote:
+          </p>
+          <div id="bookreview{{ bookreview.id }}">
+            {{ bookreview.reviewcontent | linebreaks }}
+          </div>
+          {% if not bookreview.approved and bookreview.reviewauthor == user %}
+          <p class="approval">
+            This review is awaiting approval
+          </p>
+          {% endif %}
+        </div>
+        <!-- Our for loop ends here -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}

@@ -19,7 +19,7 @@ class BookprofileList(generic.ListView):
         if paginator.num_pages > 1:
             context['second_to_last_page'] = paginator.num_pages - 1
         else:
-            context['second_to_last_page'] = None  # No second to last page available
+            context['second_to_last_page'] = None  
 
         return context
 
@@ -34,14 +34,19 @@ def bookprofile_detail(request, slug):
 
     **Template:**
 
-    :template:`bbibliorat/bookprofile_detail.html`
+    :template:`bibliorat/bookprofile_detail.html`
     """
 
     queryset = Bookprofile.objects.filter(status=1)
     bookprofile = get_object_or_404(queryset, slug=slug)
-
+    bookreviews = bookprofile.bookreview_set.all().order_by("-created_on")
+    bookreview_count = bookprofile.bookreview_set.filter(approved=True).count()
+    
     return render(
         request,
         "bibliorat/bookprofile_detail.html",
-        {"bookprofile": bookprofile},
+        {"bookprofile": bookprofile,
+        "bookreviews": bookreviews,
+        "bookreview_count": bookreview_count,
+        },
     )
