@@ -82,7 +82,7 @@
         <div class="card-body">
           {% if user.is_authenticated %}
           <h3>Leave a review:</h3>
-          <p>Posting as: {{ user.username }}</p>
+          <p>Posting as {{ user.username }}</p>
           <form id="bookreviewForm" method="post"
             style="margin-top: 1.3em;">
             {{ bookreview_form | crispy }}
