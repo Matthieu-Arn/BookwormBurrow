@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -7,6 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Bookauthor(models.Model):
     authorname = models.CharField(max_length=200, unique=True)
     authorbio = models.TextField(blank=True)
+    featured_image = CloudinaryField('image', default='placeholder')
     # created_on = models.DateTimeField(auto_now_add=True)
     # status = models.IntegerField(choices=STATUS, default=0)
 
@@ -29,6 +32,7 @@ class Bookprofile(models.Model):
     bookhook = models.TextField(blank=True)
     profilesynopsis = models.TextField(default="Synopsis goes here")
     profileanalysis = models.TextField(default="Analysis goes here")
+    featured_image = CloudinaryField('image', default='placeholder')
     bookgenre = models.CharField(max_length=30, unique=True)
     publicationyear = models.IntegerField()
     originallanguage = models.CharField(max_length=30, unique=True)
