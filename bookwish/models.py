@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from bibliorat.models import Bookprofile
 
@@ -15,6 +16,7 @@ class Bookwishitem(models.Model):
     booktitle = models.ForeignKey(
     Bookprofile, on_delete=models.CASCADE, related_name="wishlist"
     )
+    profile_image = CloudinaryField('image', default='placeholder')
     personalnotes = models.TextField(default="Personal notes go here")
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)

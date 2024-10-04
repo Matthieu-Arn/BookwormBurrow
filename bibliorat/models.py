@@ -10,8 +10,6 @@ class Bookauthor(models.Model):
     authorname = models.CharField(max_length=200, unique=True)
     authorbio = models.TextField(blank=True)
     featured_image = CloudinaryField('image', default='placeholder')
-    # created_on = models.DateTimeField(auto_now_add=True)
-    # status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ["authorname"]

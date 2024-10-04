@@ -19,8 +19,8 @@
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                    alt="{{ post.title }}">
+                                <img class="card-img-top" src=" {{ bookprofile.featured_image.url }}"
+                                    alt="{{ bookprofile.booktitle }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">{{ bookprofile.authorname }}'s</p>
