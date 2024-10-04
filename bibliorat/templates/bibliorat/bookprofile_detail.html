@@ -41,19 +41,38 @@
                 </p>
 
                 <p class="card-text"><strong>About the author</strong></p>
-                <div style="display: flex; align-items: flex-start;">
+                  <div style="display: flex; align-items: flex-start;">
                     <div style="flex: 0 0 100px; margin-right: 10px;">
                       <img src="{{ bookprofile.authorname.featured_image.url }}" alt="Author Image" class="author-image">
                     </div>
-                <div style="flex: 1;">
-                {{ bookprofile.authorname.authorbio | safe }} 
-            </div>
-        </div>
-
-            </div>
+                    <div style="flex: 1;">
+                      {{ bookprofile.authorname.authorbio | safe }} 
+                    </div>
+                  </div>
+              </div>
         </div>
     </div>
-      <!-- Displaying count of Bookreviews -->
+
+    <!-- Displaying Wishlist Options -->
+    {% if user.is_authenticated %}
+    <form action="{% url 'add_to_reading_list' bookprofile.slug %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">
+            Add to Reading List
+        </button>
+    </form>
+
+    <form action="{% url 'remove_from_reading_list' bookprofile.slug %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-warning">
+            Remove from Reading List
+        </button>
+    </form>
+    {% endif %}
+
+    <div style="height: 60px;"></div>
+
+    <!-- Displaying count of Bookreviews -->
   <div class="row">
     <div class="col-12">
       <strong class="text-secondary">
@@ -67,7 +86,7 @@
   <!-- Displaying Bookreviews -->
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
-      <h3>Reviews:</h3>
+      <h3>Reviews</h3>
       <div class="card-body">
         <!-- We want a for loop inside the empty control tags
           to iterate through each bookreview in bookreviews -->
@@ -102,7 +121,7 @@
     <div class="col-md-4 card mb-4 mt-3">
         <div class="card-body">
           {% if user.is_authenticated %}
-          <h3>Leave a review:</h3>
+          <h3>Share your thoughts</h3>
           <p>Posting as {{ user.username }}</p>
           <form id="bookreviewForm" method="post"
             style="margin-top: 1.3em;">
