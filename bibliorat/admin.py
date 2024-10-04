@@ -18,6 +18,4 @@ class BookauthorAdmin(SummernoteModelAdmin):
     search_fields = ['authorname', 'authorbio']
     summernote_fields = ('authorbio',)
 
-# Register your models here.
-# admin.site.register(Bookauthor)
 admin.site.register(Bookreview)

@@ -7,5 +7,5 @@ class BookreviewForm(forms.ModelForm):
         model = Bookreview
         fields = ('reviewcontent',)
         labels = {
-            'reviewcontent': 'Your Review ',  # Change this text
+            'reviewcontent': 'Your Review ',  
         }

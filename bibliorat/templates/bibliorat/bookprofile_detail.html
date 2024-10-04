@@ -88,8 +88,6 @@
     <div class="col-md-8 card mb-4  mt-3 ">
       <h3>Reviews</h3>
       <div class="card-body">
-        <!-- We want a for loop inside the empty control tags
-          to iterate through each bookreview in bookreviews -->
         {% for bookreview in bookreviews %}
         <div class="p-2 bookreviews
           {% if not bookreview.approved and bookreview.reviewauthor == user %}
@@ -113,7 +111,6 @@
           <button class="btn btn-edit" bookreview_id="{{ bookreview.id }}">Edit your Review</button>
         {% endif %}
         </div>
-        <!-- Our for loop ends here -->
         {% endfor %}
       </div>
     </div>

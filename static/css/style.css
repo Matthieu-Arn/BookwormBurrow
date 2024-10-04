@@ -54,7 +54,6 @@ body {
 .image-flash {
     position: absolute;
     bottom: 5%;
-    /* min-width: 30%; */
     max-height: 30%;
     left: -2px;
     background-color: #188181;
@@ -116,14 +115,14 @@ ul li a.page-link {
 
 .author-info {
     display: flex;
-    align-items: flex-start; /* Aligns items at the start */
+    align-items: flex-start;
 }
 
 .author-image {
-    width: 150px; /* Set maximum width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between image and text */
-    border-radius: 5px; /* Optional: adds rounded corners */
+    width: 150px; 
+    height: auto; 
+    margin-right: 10px; 
+    border-radius: 5px; 
 }
 
 .bookprofile-link:hover,
