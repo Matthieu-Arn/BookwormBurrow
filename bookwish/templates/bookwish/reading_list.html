@@ -10,7 +10,9 @@
   <table class="table">
       <thead>
           <tr>
+              <th>Thumbnail</th>
               <th>Book Title</th>
+              <th>Author</th>
               <th>Status</th>
               <th>Actions</th>
           </tr>
@@ -18,7 +20,17 @@
       <tbody>
           {% for item in reading_list_items %}
           <tr>
-              <td>{{ item.booktitle.booktitle }}</td>
+              <td>
+                <a href="{% url 'bookprofile_detail' item.booktitle.slug %}">
+                    <img src="{{ item.booktitle.featured_image.url }}" alt="{{ item.booktitle.booktitle }}" style="width: 80px; height: auto;">
+                </a>
+              </td>
+              <td>
+                <a href="{% url 'bookprofile_detail' item.booktitle.slug %}">
+                {{ item.booktitle.booktitle }}
+                </a>
+              </td>
+              <td>{{ item.booktitle.authorname}}</td>
               <td>
                   <form method="POST" action="{% url 'change_status' item.id %}">
                       {% csrf_token %}
