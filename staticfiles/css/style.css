@@ -100,6 +100,18 @@ ul li a.page-link {
     font-style: italic;
 }
 
+.author-info {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the start */
+}
+
+.author-image {
+    width: 150px; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
 .bookprofile-link:hover,
 .page-link {
     color: #E84610;

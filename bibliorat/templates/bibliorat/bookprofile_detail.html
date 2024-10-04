@@ -39,9 +39,17 @@
                  <p class="card-text">
                   <strong>Analysis</strong> <br>{{ bookprofile.profileanalysis | safe }}
                 </p>
-                <p class="card-text">
-                  <strong>About the author</strong> <br> {{ bookprofile.authorname.authorbio | safe }}
-                </p>
+
+                <p class="card-text"><strong>About the author</strong></p>
+                <div style="display: flex; align-items: flex-start;">
+                    <div style="flex: 0 0 100px; margin-right: 10px;">
+                      <img src="{{ bookprofile.authorname.featured_image.url }}" alt="Author Image" class="author-image">
+                    </div>
+                <div style="flex: 1;">
+                {{ bookprofile.authorname.authorbio | safe }} 
+            </div>
+        </div>
+
             </div>
         </div>
     </div>
