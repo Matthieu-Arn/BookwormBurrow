@@ -73,6 +73,7 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and bookreview.reviewauthor == user %}
+          <button class="btn btn-delete" bookreview_id="{{ bookreview.id }}">Delete your Review</button>
           <button class="btn btn-edit" bookreview_id="{{ bookreview.id }}">Edit your Review</button>
         {% endif %}
         </div>
@@ -98,6 +99,31 @@
           {% endif %}
         </div>
       </div>
+  </div>
+</div>
+
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete Review?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your review? <br>
+        Your prose will then be forever lost &hellip;
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+      </div>
+    </div>
   </div>
 </div>
 

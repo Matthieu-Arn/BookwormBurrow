@@ -71,7 +71,7 @@ def bookprofile_detail(request, slug):
 
 def bookreview_edit(request, slug, bookreview_id):
     """
-    view to edit bookreviews
+    view to edit a bookreview
     """
     if request.method == "POST":
 
@@ -85,8 +85,24 @@ def bookreview_edit(request, slug, bookreview_id):
             bookreview.bookprofile = bookprofile
             bookreview.approved = False
             bookreview.save()
-            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
+            messages.add_message(request, messages.SUCCESS, 'Your review has been updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating review!')
+            messages.add_message(request, messages.ERROR, 'An error occurred while updating review!')
+
+    return HttpResponseRedirect(reverse('bookprofile_detail', args=[slug]))
+
+def bookreview_delete(request, slug, bookreview_id):
+    """
+    view to delete a bookreview
+    """
+    queryset = Bookprofile.objects.filter(status=1)
+    bookprofile = get_object_or_404(queryset, slug=slug)
+    bookreview = get_object_or_404(Bookreview, pk=bookreview_id)
+
+    if bookreview.reviewauthor == request.user:
+        bookreview.delete()
+        messages.add_message(request, messages.SUCCESS, 'Your review has been deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
 
     return HttpResponseRedirect(reverse('bookprofile_detail', args=[slug]))
