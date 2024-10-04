@@ -3,7 +3,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Bookprofile, Bookreview
+from .models import Bookprofile, Bookreview, Bookauthor
 from .forms import BookreviewForm
 
 # Create your views here.
@@ -45,6 +45,8 @@ def bookprofile_detail(request, slug):
     bookreviews = bookprofile.bookreview_set.all().order_by("-created_on")
     bookreview_count = bookprofile.bookreview_set.filter(approved=True).count()
 
+    bookauthor = bookprofile.authorname
+
     if request.method == "POST":
         bookreview_form = BookreviewForm(data=request.POST)
         if bookreview_form.is_valid():
@@ -66,6 +68,7 @@ def bookprofile_detail(request, slug):
         "bookreviews": bookreviews,
         "bookreview_count": bookreview_count,
         "bookreview_form": bookreview_form,
+        "bookauthor": bookauthor,
         },
     )
 

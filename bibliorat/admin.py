@@ -12,6 +12,12 @@ class BookprofileAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('booktitle',)}
     summernote_fields = ('profilesynopsis', 'profileanalysis',)
 
+@admin.register(Bookauthor)
+class BookauthorAdmin(SummernoteModelAdmin):
+    list_display = ('authorname', 'authorbio')
+    search_fields = ['authorname', 'authorbio']
+    summernote_fields = ('authorbio',)
+
 # Register your models here.
-admin.site.register(Bookauthor)
+# admin.site.register(Bookauthor)
 admin.site.register(Bookreview)
