@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views import generic
 from django.contrib import messages
-from .models import Bookprofile
+from django.http import HttpResponseRedirect
+from .models import Bookprofile, Bookreview
 from .forms import BookreviewForm
 
 # Create your views here.
@@ -67,3 +68,25 @@ def bookprofile_detail(request, slug):
         "bookreview_form": bookreview_form,
         },
     )
+
+def bookreview_edit(request, slug, bookreview_id):
+    """
+    view to edit bookreviews
+    """
+    if request.method == "POST":
+
+        queryset = Bookprofile.objects.filter(status=1)
+        bookprofile = get_object_or_404(queryset, slug=slug)
+        bookreview = get_object_or_404(Bookreview, pk=bookreview_id)
+        bookreview_form = BookreviewForm(data=request.POST, instance=bookreview)
+
+        if bookreview_form.is_valid() and bookreview.reviewauthor == request.user:
+            bookreview = bookreview_form.save(commit=False)
+            bookreview.bookprofile = bookprofile
+            bookreview.approved = False
+            bookreview.save()
+            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating review!')
+
+    return HttpResponseRedirect(reverse('bookprofile_detail', args=[slug]))

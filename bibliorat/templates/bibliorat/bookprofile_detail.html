@@ -72,6 +72,9 @@
             This review is awaiting approval
           </p>
           {% endif %}
+          {% if user.is_authenticated and bookreview.reviewauthor == user %}
+          <button class="btn btn-edit" bookreview_id="{{ bookreview.id }}">Edit your Review</button>
+        {% endif %}
         </div>
         <!-- Our for loop ends here -->
         {% endfor %}
@@ -99,3 +102,7 @@
 </div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/reviews.js' %}"></script>
+{% endblock %}
