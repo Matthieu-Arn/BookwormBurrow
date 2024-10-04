@@ -2,9 +2,7 @@
 <h1 align="center">Bookworm Burrow</h1>
 <br>
 The page is deployed here: https://bookwormburrow-1107f1b88f25.herokuapp.com/ <br>
-The project board is available at: https://github.com/users/Matthieu-Arn/projects/7 <br>
-Credentials for the Superuser: <br>
-     - Username: TheHeadBookworm / Password: G7x#pV9Q
+The project board is available at: https://github.com/users/Matthieu-Arn/projects/7
 <br><br>
 
 **Bookworm Burrow** is a meeting place for avid book readers looking for their next read! <br>
