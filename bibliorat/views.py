@@ -58,6 +58,11 @@ def bookprofile_detail(request, slug):
                 request, messages.SUCCESS,
                 'Review submitted and awaiting approval'
             )
+            # Add redirect after form submission
+            return redirect('bookprofile_detail', slug=slug)
+        else:
+            # Print form errors to check
+            print(bookreview_form.errors)
 
     bookreview_form = BookreviewForm()
     

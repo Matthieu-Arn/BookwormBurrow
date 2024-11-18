@@ -6,5 +6,5 @@ from bibliorat.forms import BookreviewForm
 class TestBookreviewForm(TestCase):
 
     def test_form_is_valid(self):
-        bookreview_form = BookreviewForm({'reviewcontent': 'This is a great book'})
+        bookreview_form = BookreviewForm({'reviewcontent': 'This is a great book!'})
         self.assertTrue(bookreview_form.is_valid())
