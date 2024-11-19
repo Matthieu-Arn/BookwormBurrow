@@ -9,4 +9,5 @@ urlpatterns = [
          views.bookreview_edit, name='bookreview_edit'),
     path('<slug:slug>/delete_bookreview/<int:bookreview_id>',
          views.bookreview_delete, name='bookreview_delete'),
+    path('bookprofile/<slug:slug>/', views.bookprofile_detail, name='bookprofile_detail'),
 ]

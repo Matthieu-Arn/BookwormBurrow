@@ -3,7 +3,7 @@ from .models import Bookwishitem
 from bibliorat.models import Bookprofile
 
 # Create your views here.
-def mybookwishitems(request):
+def mybookwishitems(request, slug):
     if request.user.is_authenticated:
         bookprofile = get_object_or_404(Bookprofile, slug=slug)
         # Create a new wishlist item
