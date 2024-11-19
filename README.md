@@ -144,7 +144,8 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
 ## Deployment
   - The site was deployed from the early stages of development using GitHub and Heroku
-  - The live site can be found at: https://bookwormburrow-1107f1b88f25.herokuapp.com/
+  - The live site can be found at: https://bookwormburrow-1107f1b88f25.herokuapp.com/ 
+  - The repository is publicly available at https://github.com/Matthieu-Arn/BookwormBurrow, from where it can be cloned or forked 
 
 <br>
 
