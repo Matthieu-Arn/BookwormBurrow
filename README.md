@@ -104,6 +104,9 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
       - GitHub Docs https://docs.github.com/en
       - Markdown Guide https://www.markdownguide.org/
       - Code Institute LMS https://learn.codeinstitute.net/ci_program/fsbootcamp231121
+      - HTML Validator https://validator.w3.org/
+      - CSS Validator https://jigsaw.w3.org/css-validator/
+      - JavaScript Validator https://jshint.com/
       - Google DevTools https://developer.chrome.com/docs/devtools
       - ReadMe file https://github.com/elainebroche-dev/ms1-thrive/tree/master
     - Background Information on books and their authors
@@ -114,6 +117,10 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
 ## Testing
   Testing was performed both manually and through dedicated coding for both apps. <br>
+
+  ### HTML Validation
+
+ <img src="documentation/validation/Bookworm-Burrow - Validation_HTML.jpg" width="700" alt="W3C HTML Validation Output">  
 
   ### Lighthouse
 
