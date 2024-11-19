@@ -108,14 +108,15 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
       - ReadMe file https://github.com/elainebroche-dev/ms1-thrive/tree/master
     - Background Information on books and their authors
       - Wikipedia https://en.wikipedia.org/wiki/Main_Page
+      - OpenAI ChatGPT https://chatgpt.com/ 
           
 <br>
 
 ## Testing
-  Testing was unfortunately not performed at scale. <br>
+  Testing was performed both manually and through dedicated coding for both apps. <br>
   
   ### Browser Compatibility
-  Browser compatibility and responsiveness were tested across platforms and devices, and did not offer significant failure.
+  Browser compatibility and responsiveness were tested across several platforms (Google Chrome, Mozilla Firefox, Microsoft Edge) and devices (varying displays ranging in size from mobile phone to desktop), and did not offer significant failure.
 
   ### Known Bugs
   Under individual book profiles, buttons to add or remove the current book from a reading list are not working as they should (The "Remove from reading list" button should not appear if the book is not on the reading list, while the "Add to reading list" button should not appear if the book is already on the reading list) 
@@ -131,6 +132,7 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 ## Credits
 
 ### Content
+  - Book profiles (synopsis and analysis) as well as author biographies were created using *ChatGPT*, and only edited by the project's author where required
 
 ### Code
   - Project structure and architecture adapted or inspired from several walkthrough projects as provided by the *Code Institute*'s LMS
@@ -139,5 +141,5 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
   - Several bugs identified and fixed using *ChatGPT*
 
 ### Media
-  - As stated above, media sourced from Wikimedia / Creative Commons wherever possible. Several book covers however were sourced from online retailers (Waterstones, Amazon)
-  - The author aknowledges that this project and all its content are for educational purposes only, and that copyrighted materials are included under fair use provisions
+  - As stated above, media sourced from Wikimedia / Creative Commons wherever possible. Several book covers were  however sourced from online retailers (Waterstones, Amazon) when no copyright-free alternatives could be found 
+  - This project's developer acknowledges that the project and all its content are for educational purposes only, and that copyrighted materials are included in accordance with fair use provisions
