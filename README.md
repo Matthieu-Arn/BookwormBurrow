@@ -126,6 +126,10 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
  <img src="documentation/validation/Bookworm-Burrow - Validation_CSS.jpg" width="700" alt="W3C CSS Validation Output">  
 
+ ### JavaScript Validation
+
+ <img src="documentation/validation/Bookworm-Burrow - Validation_JSHint.jpg" width="700" alt="JSHint JavaScript Validation Output">  
+
   ### Lighthouse
 
    <img src="documentation/validation/Bookworm-Burrow - Validation_Lighthouse.jpg" width="700" alt="Google Lighthouse Output">
