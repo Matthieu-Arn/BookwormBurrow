@@ -114,6 +114,10 @@ Admin users can add, modify or delete new book profiles, add, modify or delete a
 
 ## Testing
   Testing was performed both manually and through dedicated coding for both apps. <br>
+
+  ### Lighthouse
+
+   <img src="documentation/validation/Bookworm-Burrow - Validation_Lighthouse.jpg" width="700" alt="Google Lighthouse Output">
   
   ### Browser Compatibility
   Browser compatibility and responsiveness were tested across several platforms (Google Chrome, Mozilla Firefox, Microsoft Edge) and devices (varying displays ranging in size from mobile phone to desktop), and did not offer significant failure.
